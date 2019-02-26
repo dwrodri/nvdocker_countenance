@@ -27,7 +27,7 @@ As an example, I'll be walking through this process with my own project
 
 Many high level programming languages have some library/module index on 
 the Internet to facilitate code sharing (Python's PyPI, Ruby's Gem system, etc.). 
-In the world of containers, the eqiuvalent service is provided through container
+In the world of containers, the equivalent service is provided through container
 registries. The registry that interests us the most is the [Nvidia GPU Cloud Container Registry](https://ngc.nvidia.com/containers) (NCR). 
 
 
@@ -109,7 +109,7 @@ table of useful Dockerfile instructions for quick reference:
 | WORKDIR 	| WORKDIR \<Folder Name\>                          			| Make container boot dir                                                                                                   	|
                                                                 		
 You can find more information about creating Dockerfiles that fit your needs 
-in [this](https://docs.docker.com/engine/reference/builder/) part of the 
+in [this](https://docs.docker.com/engine/reference/builder/) part of 
 the official documentation.
 
 Once this is set up, you can build the container with the command:
