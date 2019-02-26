@@ -1,0 +1,23 @@
+# Set Docker Base Image to pull from
+FROM nvcr.io/nvidia/tensorflow:19.01-py3
+
+# Create working directory for my application
+WORKDIR /app
+
+# Copy the contents of the folder containing the Dockerfile into container's 
+# working dir
+COPY . /app
+
+# Set an environment variable called CUDA_VISIBLE_DEVICES in the container
+ENV CUDA_VISIBLE_DEVICES=PCI_BUS_ID
+
+# Open Port 8000 for Tensorboard
+EXPOSE 8000
+
+# Create a mount point for a directory that is shared between the container
+# and the host which  will persist after the contained application exits.
+# See: https://docs.docker.com/storage/volumes
+
+
+# Use RUN to execute shell commands that change the state of the container
+RUN pip install requirements.txt
